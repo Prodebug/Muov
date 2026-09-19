@@ -5,14 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
+      id="meta-description"
       content="Muov — разработка современных сайтов под ключ во Франции. Чистый код HTML, CSS, JS, PHP, SQL. Без конструкторов."
     />
     <meta name="theme-color" content="#06070b" />
-    <title>Muov — сайты под ключ во Франции</title>
+    <title id="page-title">Muov — сайты под ключ во Франции</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Unbounded:wght@500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Noto+Sans+Armenian:wght@400;500;600;700&family=Unbounded:wght@500;600;700;800&display=swap"
       rel="stylesheet"
     />
     <link
@@ -26,49 +27,54 @@
     <div class="glow" aria-hidden="true"></div>
     <div class="grid-bg" aria-hidden="true"></div>
 
-    <!-- 1. Шапка -->
     <header class="header">
       <div class="container header-inner">
         <a class="logo" href="#top">Muov<span class="logo-dot">.</span></a>
-        <a class="btn btn-light" href="#order">Связаться</a>
+        <div class="header-actions">
+          <div class="lang-switch" role="group" aria-label="Language">
+            <button type="button" class="lang-btn is-active" data-lang="ru" aria-pressed="true">RU</button>
+            <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+            <button type="button" class="lang-btn" data-lang="fr" aria-pressed="false">FR</button>
+            <button type="button" class="lang-btn" data-lang="hy" aria-pressed="false">HY</button>
+          </div>
+          <a class="btn btn-light" href="#order" data-i18n="nav.contact">Связаться</a>
+        </div>
       </div>
     </header>
 
     <main>
-      <!-- 2. Главный экран -->
       <section class="hero" id="top">
         <div class="container hero-inner">
           <p class="eyebrow">
             <span class="pulse-dot"></span>
-            Студия · France · Remote
+            <span data-i18n="hero.eyebrow">Студия · France · Remote</span>
           </p>
-          <h1>Разработка современных сайтов под ключ во Франции</h1>
-          <p class="lede">
+          <h1 data-i18n="hero.title">Разработка современных сайтов под ключ во Франции</h1>
+          <p class="lede" data-i18n="hero.lead">
             Проектирую и собираю быстрые сайты на чистом коде. Работаю удалённо по
             всей стране — от брифа до готового архива для вашего хостинга.
           </p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#order">Оставить заявку</a>
-            <span class="hint">Ответ в течение рабочего дня</span>
+            <a class="btn btn-primary" href="#order" data-i18n="hero.cta">Оставить заявку</a>
+            <span class="hint" data-i18n="hero.hint">Ответ в течение рабочего дня</span>
           </div>
         </div>
       </section>
 
-      <!-- 3. Обо мне -->
       <section class="about" id="about">
         <div class="container about-grid">
           <div>
-            <p class="kicker">01 — О бренде</p>
-            <h2>Чистый код вместо конструкторов</h2>
+            <p class="kicker" data-i18n="about.kicker">01 — О бренде</p>
+            <h2 data-i18n="about.title">Чистый код вместо конструкторов</h2>
           </div>
           <div class="about-copy">
-            <p>
+            <p data-i18n="about.p1">
               Бренд Muov создаёт быстрые и качественные сайты на чистом коде —
               HTML, CSS, JavaScript, PHP и SQL. Без медленных конструкторов,
               которые раздувают страницу, ограничивают вёрстку и ломаются при
               обновлении.
             </p>
-            <p>
+            <p data-i18n="about.p2">
               Каждый проект собирается вручную: вы получаете прозрачный код,
               контроль над файлами и сайт, который не зависит от чужих шаблонов.
             </p>
@@ -81,16 +87,16 @@
             </ul>
             <div class="callout">
               <article>
-                <h3>Формат сдачи</h3>
-                <p>
+                <h3 data-i18n="about.deliveryTitle">Формат сдачи</h3>
+                <p data-i18n="about.delivery">
                   Клиент получает полностью готовый к работе .zip-архив со всеми
                   файлами сайта и базой данных — остаётся загрузить его на свой
                   хостинг.
                 </p>
               </article>
               <article>
-                <h3>Удалённо по Франции</h3>
-                <p>
+                <h3 data-i18n="about.remoteTitle">Удалённо по Франции</h3>
+                <p data-i18n="about.remote">
                   Работаю с клиентами по всей стране. Созвоны, бриф и сдача —
                   онлайн, без привязки к городу.
                 </p>
@@ -100,63 +106,57 @@
         </div>
       </section>
 
-      <!-- 4. Услуги и цены -->
       <section class="services" id="services">
         <div class="container">
           <div class="section-head">
-            <p class="kicker">02 — Услуги и цены</p>
-            <h2>Два понятных тарифа</h2>
+            <p class="kicker" data-i18n="services.kicker">02 — Услуги и цены</p>
+            <h2 data-i18n="services.title">Два понятных тарифа</h2>
           </div>
           <div class="plans">
             <article class="plan">
-              <h3>Сайт-визитка / Лендинг</h3>
-              <p class="price"><span>от</span> €350</p>
+              <h3 data-i18n="plans.0.name">Сайт-визитка / Лендинг</h3>
+              <p class="price"><span data-i18n="services.from">от</span> €350</p>
               <ul>
-                <li>1 страница</li>
-                <li>Форма связи</li>
-                <li>Адаптация под телефоны и планшеты</li>
-                <li>Срок 2–4 дня</li>
+                <li data-i18n="plans.0.items.0">1 страница</li>
+                <li data-i18n="plans.0.items.1">Форма связи</li>
+                <li data-i18n="plans.0.items.2">Адаптация под телефоны и планшеты</li>
+                <li data-i18n="plans.0.items.3">Срок 2–4 дня</li>
               </ul>
-              <a class="btn btn-ghost" href="#order">Заказать</a>
+              <a class="btn btn-ghost" href="#order" data-i18n="services.order">Заказать</a>
             </article>
             <article class="plan">
-              <h3>Многостраничный сайт</h3>
-              <p class="price"><span>от</span> €570</p>
+              <h3 data-i18n="plans.1.name">Многостраничный сайт</h3>
+              <p class="price"><span data-i18n="services.from">от</span> €570</p>
               <ul>
-                <li>Главная + дополнительные страницы услуг</li>
-                <li>Галерея</li>
-                <li>Адаптация под все устройства</li>
-                <li>Срок 1–2 недели</li>
+                <li data-i18n="plans.1.items.0">Главная + дополнительные страницы услуг</li>
+                <li data-i18n="plans.1.items.1">Галерея</li>
+                <li data-i18n="plans.1.items.2">Адаптация под все устройства</li>
+                <li data-i18n="plans.1.items.3">Срок 1–2 недели</li>
               </ul>
-              <a class="btn btn-ghost" href="#order">Заказать</a>
+              <a class="btn btn-ghost" href="#order" data-i18n="services.order">Заказать</a>
             </article>
           </div>
         </div>
       </section>
 
-      <!-- 5. Форма заказа -->
       <section class="order" id="order">
         <div class="container order-grid">
           <div>
-            <p class="kicker">03 — Заявка</p>
-            <h2>Оставьте задачу — соберу смету и сроки</h2>
-            <p class="lede">
+            <p class="kicker" data-i18n="order.kicker">03 — Заявка</p>
+            <h2 data-i18n="order.title">Оставьте задачу — соберу смету и сроки</h2>
+            <p class="lede" data-i18n="order.lead">
               Коротко опишите проект: тип сайта, пожелания по страницам и удобный
               способ связи. Отвечаю лично, без менеджеров и чат-ботов.
             </p>
           </div>
 
           <form class="form" id="order-form">
-            <!--
-              WEB3FORMS: вставьте ваш личный access_key вместо YOUR_ACCESS_KEY_HERE.
-              Бесплатный ключ выдаётся на https://web3forms.com
-            -->
             <input
               type="hidden"
               name="access_key"
               value="eda90e22-bb8c-4262-8545-c6e752b4a12f"
             />
-            <input type="hidden" name="subject" value="Новая заявка с сайта Muov" />
+            <input type="hidden" name="subject" id="form-subject" value="Новая заявка с сайта Muov" />
             <input type="hidden" name="from_name" value="Muov" />
             <input
               type="checkbox"
@@ -167,17 +167,18 @@
             />
 
             <label>
-              <span>Имя</span>
+              <span data-i18n="form.name">Имя</span>
               <input
                 type="text"
                 name="name"
                 required
                 autocomplete="name"
+                data-i18n-placeholder="form.namePh"
                 placeholder="Как к вам обращаться"
               />
             </label>
             <label>
-              <span>Email</span>
+              <span data-i18n="form.email">Email</span>
               <input
                 type="email"
                 name="email"
@@ -187,25 +188,27 @@
               />
             </label>
             <label>
-              <span>Телефон / мессенджер</span>
+              <span data-i18n="form.phone">Телефон / мессенджер</span>
               <input
                 type="text"
                 name="phone"
                 autocomplete="tel"
+                data-i18n-placeholder="form.phonePh"
                 placeholder="Telegram, WhatsApp или номер"
               />
             </label>
             <label>
-              <span>Описание проекта</span>
+              <span data-i18n="form.message">Описание проекта</span>
               <textarea
                 name="message"
                 required
                 rows="5"
+                data-i18n-placeholder="form.messagePh"
                 placeholder="Тип сайта, сроки, пожелания"
               ></textarea>
             </label>
 
-            <button class="btn btn-primary btn-submit" type="submit">
+            <button class="btn btn-primary btn-submit" type="submit" data-i18n="form.submit">
               Отправить заявку
             </button>
             <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
@@ -217,7 +220,7 @@
     <footer class="footer">
       <div class="container footer-inner">
         <p class="logo">Muov<span class="logo-dot">.</span></p>
-        <p>© 2026 · Веб-разработка во Франции · Remote</p>
+        <p data-i18n="footer">© 2026 · Веб-разработка во Франции · Remote</p>
       </div>
     </footer>
 
